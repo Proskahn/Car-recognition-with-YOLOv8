@@ -21,22 +21,25 @@ The dependent packages for YOLOv8 are as follows:
 
 To install and use the YOLOv8 algorithm, follow these instructions:
 
-1. **Download YOLOv8 Source Code from GitHub**: To use YOLOv8, we need to download the source code from the YOLOv8 GitHub repository. The YOLOv8 source code is publicly available on GitHub. Follow these steps:
+### Download YOLOv8 Source Code from GitHub: 
+
+To use YOLOv8, we need to download the source code from the YOLOv8 GitHub repository. The YOLOv8 source code is publicly available on GitHub. Follow these steps:
    - Step 1: Access the YOLOv8 GitHub repository [here](https://github.com/ultralytics/ultralytics).
   
 
-4. **Prepare the Data**: To train YOLOv8 on any dataset, you need two main components:
+### Prepare the Data 
+
+To train YOLOv8 on any dataset, you need two main components:
    - Data directory: Prepare a directory that contains the dataset. Building a custom dataset can be a painful process. It might take dozens or even hundreds of hours to collect images, label them, and export them in the proper format. Fortunately, Roboflow makes this process straightforward. If you only have images, you can label them in Roboflow. For details please refer [here](https://fulldataalchemist.medium.com/building-your-own-real-time-object-detection-app-roboflow-yolov8-and-streamlit-part-1-f577cf0aa6e5).
   
 
 
-5. **Perform Training**: After completing the preparation steps, you can start the training process with the prepared dataset. Execute the following command (replace the data.yaml file name if using a different dataset):
+### Perform Training
+ After completing the preparation steps, you can start the training process with the prepared dataset. Execute the following command (replace the data.yaml file name if using a different dataset):
 
-   ```python
- model.train(data='/content/car-detection-2/data.yaml', epochs=20, imgsz=640)
+   ```python model.train(data='/content/car-detection-2/data.yaml', epochs=20, imgsz=640)
    ```
-
-
+### Test the model
 
    To use the trained model on any arbitrary image with path "source" , use the following command:
 
@@ -45,7 +48,9 @@ To install and use the YOLOv8 algorithm, follow these instructions:
               save=True, conf=0.2,iou=0.5)
    ```
 
-5. **Test model**After finishing the training, you can test your model with the following command:
+fter finishing the training, you can test your model with the following command:
+
+
    ```python
    results=model.predict(source="Your test image path",
               save=True, conf=0.2,iou=0.5)
@@ -75,7 +80,9 @@ for box in result.boxes:
     plot = results[0].plot()
 plot = cv.cvtColor(plot, cv.COLOR_BGR2RGB)
 display(Image.fromarray(plot))
-   ```
+ ```
+
+
 In my case we get result af follows:
 
 <img src="Unknown-2.png" style="width:800px;height:300px;">
