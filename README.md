@@ -13,9 +13,8 @@ The dependent packages for YOLOv8 are as follows:
 * Sklearn 1.26.3
 * SciPy 1.7.3
 * skimage 0.19.2
-* PIL
-* IPython
-* pathlib
+* PIL 9.4.0
+* IPython 7.34.0
 
 
 ## Program Installation
