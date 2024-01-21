@@ -37,7 +37,8 @@ To train YOLOv8 on any dataset, you need two main components:
 ### Perform Training
  After completing the preparation steps, you can start the training process with the prepared dataset. Execute the following command (replace the data.yaml file name if using a different dataset):
 
-   ```python model.train(data='/content/car-detection-2/data.yaml', epochs=20, imgsz=640)
+   ```python 
+ model.train(data='/content/car-detection-2/data.yaml', epochs=20, imgsz=640)
    ```
 ### Test the model
 
